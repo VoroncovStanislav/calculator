@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Эксклюзивные предложения для инвестирования в недвижимость Краснодарского края">
+    <meta name="keywords" content="Недвижимость, Краснодарский край, Инвестиции, Новостройки, Инвестирование в недвижимость, Недвижимость в Краснодарском крае, Коммерческая недвижимость, Апартаменты с управлением, Готовый арендный бизнес">
+    <meta name="robots" content="all">
+    <meta name="author" content="Stanislav Voroncov">
+    <meta name="Copyright" content="Stanislav Voroncov">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Инвеcтиции в недвижимость">
+    <meta property="og:description" content="Эксклюзивные предложения для инвестирования в недвижимость Краснодарского края">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://invest-n.pro/">
+    <meta property="og:site_name" content="Инвеcтиции в недвижимость">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Stanislav">
+    <meta name="twitter:title" content="Инвеcтиции в недвижимость">
+    <meta name="twitter:description" content="Эксклюзивные предложения для инвестирования в недвижимость Краснодарского края">
+    <meta name="twitter:image" content="">
+    <link rel="icon" href="https://invest-n.pro/favicon.ico" type="image/x-icon">
+    <title>Расчет срока окупаемости и ставки капитализации объекта</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar__wrap">
+                    <div class="hamb">
+                        <div class="hamb__field" id="hamb">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                    <div class="logo" onclick="location.href='index.html'"></div>
+                    <ul class="menu" id="menu">
+                        <li><a href="index.html">На главную</a></li>
+                        <li><a href="#investors">Новости</a></li>
+                        <li><a href="index.html#partners">Партнеры</a></li>
+                        <li><a href="index.html#Contacts">Контакты</a></li>
+                    </ul>
+                    <a href="#" class="telefon">8-999-425-03-44</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="popup" id="popup"></div>
+    <main>
+        <section class="title">
+            <div class="container">
+                <div class="title_container">
+                    <h1>Расчет срока окупаемости и ставки капитализации объектов недвижимости</h1>
+                    <h2>
+                        Уважаемые клиенты! Наша компания предлагает Вам услугу, которая поможет быстро определить текущую рыночную стоимость вашего объекта. 
+                        Чаще всего, покупателями коммерческой недвижимости являются инвесторы. 
+                        Основная цель этих инвесторов - получение прибыли, и поэтому они применяют доходный метод при оценке объекта. 
+                        Данный метод оценки позволяет рассчитать период окупаемости объекта и установить ставку капитализации.
+                    </h2>
+                    <h3>
+                        Если вы владеете недвижимостью, данный сервис поможет вам оценить ее рыночную стоимость. 
+                        Установка правильной начальной цены позволит привлечь максимальное количество потенциальных покупателей и способствует быстрой реализации объекта.
+                    </h3>
+                    <h3>Инвесторы могут легко рассчитать целесообразность приобретения того или иногообъекта недвижимости.</h3>
+                </div>
+            </div>
+        </section>
+        <section class="calcAll">
+            <div class="firstCalc">
+                <div class="container">
+                    <div class="firstTitle">
+                        <h2>Расчет срока окупаемости и ставки капитализации объекта целиком</h2>
+                    </div>
+                    <div class="firstCalcItem">
+                        <div class="form_inputs">
+                            <div class="pair">
+                                <label for="">Стоимость недвижимости</label>
+                                <input id="price" type="text" placeholder="0">    
+                            </div>
+                            <div class="pair">
+                                <label for="">Валовой доход (аренда) в месяц</label>
+                                <input id="dohod" type="text" placeholder="0">
+                            </div>
+                            <div class="pair">
+                                <label for="">Расходы (коммунальные) на обслуживание в месяц</label>
+                                <input id="rashod" type="text" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="knopki">
+                            <button onclick="rashet()">Рассчитать</button>
+                            <button onclick="reset()">Очистить</button>      
+                        </div>
+                        <div class="itog">
+                            <div class="part">
+                                <label for="">Срок окупаемости</label>  
+                                <p class="okupaemost">0</p> 
+                            </div>
+                            <div class="part">
+                                <label for="">Ставка капитализации (норма доходности)</label>
+                                <p class="kapitalizacia">0</p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>    
+        </section>
+        <section class="calcMetr">
+            <div class="firstCalc">
+                <div class="container">
+                    <div class="firstTitle">
+                        <h2>Расчет срока окупаемости и ставки капитализации за м2</h2>
+                    </div>
+                    <div class="firstCalcItem">
+                        <div class="form_inputs">
+                            <div class="pair">
+                                <label for="">Стоимость 1 м2 недвижимости</label>
+                                <input id="price2" type="text" placeholder="0">    
+                            </div>
+                            <div class="pair">
+                                <label for="">Валовой доход (аренда) в месяц за 1м2</label>
+                                <input id="dohod2" type="text" placeholder="0">
+                            </div>
+                            <div class="pair">
+                                <label for="">Расходы (коммунальные) на обслуживание в месяц за 1 м2</label>
+                                <input id="rashod2" type="text" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="knopki">
+                            <button onclick="rashet2()">Рассчитать</button>
+                            <button onclick="reset2()">Очистить</button>      
+                        </div>
+                        <div class="itog">
+                            <div class="part">
+                                <label for="">Срок окупаемости</label>  
+                                <p class="okupaemost2">0</p> 
+                            </div>
+                            <div class="part">
+                                <label for="">Ставка капитализации (норма доходности)</label>
+                                <p class="kapitalizacia2">0</p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>    
+        </section>   
+    </main>
+    <footer>
+        <div class="container">
+            
+            <div class="left">
+                <div class="ceti">
+                    <div class="ceti_item">
+                        <p>Есть вопросы?</p>
+                        <img src="vk.svg" alt="иконка ВК">
+                        <img src="telega.svg" alt="иконка Telegram">
+                        <img src="min_wats_1.webp" alt="иконка Whatsapp">    
+                    </div>
+                    <div class="PR">
+                        <a href="Политика конфиденциальности.docx" download="" target="_blank"><p>Правила конфиденциальности</p></a>
+                        <a class="copyright" href="https://vk.com/cosmostas_69" target="_blank"><p class="copyright">© Voroncov Stanislav, 2023 - Создать сайт</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="test.js"></script>
+    <script>
+        let price = document.getElementById("price");
+        let dohod = document.getElementById("dohod");
+        let rashod = document.getElementById("rashod");
+        let okupaemost_p = document.querySelector(".okupaemost");
+        let kapitalizacia_p = document.querySelector(".kapitalizacia");
+
+        let price2 = document.getElementById("price2");
+        let dohod2 = document.getElementById("dohod2");
+        let rashod2 = document.getElementById("rashod2");
+        let okupaemost_p2 = document.querySelector(".okupaemost2");
+        let kapitalizacia_p2 = document.querySelector(".kapitalizacia2");
+
+        function rashet() {
+            let ok = price.value / ((dohod.value * 12) - (rashod.value * 12));
+            let okupaemost = Math.floor(ok * 100) / 100
+            // let procent = 100;
+            let kapitalizacia = (((dohod.value * 12) - (rashod.value * 12)) * 100) / price.value;
+            okupaemost_p.innerHTML = okupaemost + ' ' + 'год';
+            kapitalizacia_p.innerHTML = kapitalizacia + '%' + ' в год';
+            //console.log(okupaemost);
+            //console.log(kapitalizacia);
+        }
+        function rashet2() {
+            let ok2 = price2.value / ((dohod2.value * 12) - (rashod2.value * 12));
+            let okupaemost2 = Math.floor(ok2 * 100) / 100
+            // let procent = 100;
+            let kapitalizacia2 = (((dohod2.value * 12) - (rashod2.value * 12)) * 100) / price2.value;
+            okupaemost_p2.innerHTML = okupaemost2 + ' ' + 'год';
+            kapitalizacia_p2.innerHTML = kapitalizacia2 + '%' + ' в год';
+            //console.log(okupaemost);
+            //console.log(kapitalizacia);
+        }
+
+        function reset() {
+            price.value = "";
+            dohod.value = "";
+            rashod.value = "";
+            okupaemost_p.innerHTML = 0;
+            kapitalizacia_p.innerHTML = 0;
+        }
+        function reset2() {
+            price2.value = "";
+            dohod2.value = "";
+            rashod2.value = "";
+            okupaemost_p2.innerHTML = 0;
+            kapitalizacia_p2.innerHTML = 0;
+        }
+    </script>
+</body>
+</html>
